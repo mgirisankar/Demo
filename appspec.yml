@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files:
+  - source: /phpinfo.php
+    destination: /usr/share/nginx/html/
+hooks:
+ - location: Scripts/Ownership.sh
+   timeout: 180
+   runas: root
