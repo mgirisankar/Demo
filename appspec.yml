@@ -3,7 +3,12 @@ os: linux
 files:
   - source: /phpinfo.php
     destination: /usr/share/nginx/html/
+permissions:
+  - object: /usr/share/nginx/html/
+    owner: root
+    group: root
 hooks:
- - location: Scripts/Ownership.sh
-   timeout: 180
-   runas: root
+BeforeInstall:
+        - location: Scripts/beforeInstall.bash
+AfterInstall:
+        - location: Scripts/afterInstall.bashU
