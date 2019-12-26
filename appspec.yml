@@ -11,4 +11,4 @@ hooks:
 BeforeInstall:
         - location: Scripts/beforeInstall.bash
 AfterInstall:
-        - location: Scripts/afterInstall.bashU
+        - location: Scripts/afterInstall.bash
